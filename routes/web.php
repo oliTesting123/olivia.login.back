@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UsuariosController;
-use App\Http\Controllers\ProductosController;
+use App\Http\Controllers\UsersController;
+use App\Http\Controllers\ProductsController;
 
 
 /*
@@ -20,8 +20,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::apiResource('/products', ProductosController::class);
-Route::resource('/usuarios', UsuariosController::class);
+Route::apiResource('/products', ProductsController::class);
+Route::resource('/usuarios', UsersController::class);
 
 
 
