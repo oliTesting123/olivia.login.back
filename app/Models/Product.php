@@ -9,5 +9,10 @@ class Product extends Model
 {
     protected $fillable = ['name', 'price', 'description', 'code'];
 
-    use HasFactory;
+    protected $hidden = [
+        'created_at',
+    ];
+
+
+    // use HasFactory;
 }

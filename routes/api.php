@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\AuthController;
+use App\Exceptions;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,13 +17,14 @@ use App\Http\Controllers\AuthController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::post('login', [AuthController::class, 'login']);
+Route::post('login', [AuthController::class, 'login'])->name('login');
 Route::post('register', [AuthController::class, 'register']);
 
 Route::middleware('auth:api')->group(function () {
-    // Rutas protegidas aquí
+    Route::apiResource('/products', ProductsController::class);
+    Route::apiResource('/users', UsersController::class);
 });
 
 
-Route::apiResource('/products', ProductsController::class);
-Route::apiResource('/users', UsersController::class);
+// Route::apiResource('/products', ProductsController::class);
+// Route::apiResource('/users', UsersController::class);

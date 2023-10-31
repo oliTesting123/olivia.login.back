@@ -20,8 +20,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::apiResource('/products', ProductsController::class);
-Route::resource('/usuarios', UsersController::class);
+// Route::apiResource('/products', ProductsController::class);
+// Route::resource('/usuarios', UsersController::class);
 
 
 

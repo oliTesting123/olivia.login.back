@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('description', 500);
-            $table->string('code');
+            $table->string('code')->unique();
             $table->decimal('price', $totalDigits = 8, $decimalPlaces = 2);
             $table->timestamps();
         });
