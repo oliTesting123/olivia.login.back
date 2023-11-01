@@ -24,7 +24,3 @@ Route::middleware('auth:api')->group(function () {
     Route::apiResource('/products', ProductsController::class);
     Route::apiResource('/users', UsersController::class);
 });
-
-
-// Route::apiResource('/products', ProductsController::class);
-// Route::apiResource('/users', UsersController::class);

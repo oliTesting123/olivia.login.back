@@ -16,7 +16,7 @@ class ProductsController extends Controller
     public function index()
     {
         $products=DB::table('products')
-                ->select('id','name','description', 'price')
+                ->select('id','name','description','code','price')
                 ->get();
         
         return $products;
